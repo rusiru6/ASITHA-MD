@@ -161,14 +161,14 @@ let MAX_SIZE = "SIZE IS TO BIG"
 
 
 
-numrep.push(`1.1 ${prefix}ytmp4 ${data.url} & 360`)
-numrep.push(`1.2 ${prefix}ytmp4 ${data.url} & 480`)
-numrep.push(`1.3 ${prefix}ytmp4 ${data.url} & 720`)
-numrep.push(`1.4 ${prefix}ytmp4 ${data.url} & 1080`)
-numrep.push(`2.1 ${prefix}ytvdoc ${data.url} & 360`)
-numrep.push(`2.2 ${prefix}ytvdoc ${data.url} & 480`)
-numrep.push(`2.3 ${prefix}ytvdoc ${data.url} & 720`)
-numrep.push(`2.4 ${prefix}ytvdoc ${data.url} & 1080`)
+numrep.push(`1.1 ${prefix}ytmp4 ${data.url} & 2`)
+numrep.push(`1.2 ${prefix}ytmp4 ${data.url} & 3`)
+numrep.push(`1.3 ${prefix}ytmp4 ${data.url} & 4`)
+numrep.push(`1.4 ${prefix}ytmp4 ${data.url} & 5`)
+numrep.push(`2.1 ${prefix}ytvdoc ${data.url} & 2`)
+numrep.push(`2.2 ${prefix}ytvdoc ${data.url} & 3`)
+numrep.push(`2.3 ${prefix}ytvdoc ${data.url} & 4`)
+numrep.push(`2.4 ${prefix}ytvdoc ${data.url} & 5`)
 
 
 const mass = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek }); 
@@ -208,10 +208,10 @@ if (!q.includes('https://youtube.com/watch?v=')) return await reply(msr.not_fo)
 
     
     
-    //const down = await fetchJson(`https://api-pink-venom.vercel.app/api/ytmp3?url=${q}`)
-    //const downloadUrl = down.result.download_url;
-    let data = await gifted.ytmp3(q)
-    const downloadUrl = data.download_url
+    const down = await fetchJson(`https://api-pink-venom.vercel.app/api/ytmp3?url=${q}`)
+    const downloadUrl = down.result.download_url;
+    //let data = await gifted.ytmp3(q)
+   // const downloadUrl = data.download_url
 
 await conn.sendMessage(from, { react: { text: '⬆', key: mek.key }})
 await conn.sendMessage(from, { audio: { url: downloadUrl }, mimetype: "audio/mpeg" }, {quoted:mek})
@@ -246,10 +246,10 @@ let MAX_SIZE = "SIZE IS TO BIG"
     
 
     
-    //const down = await fetchJson(`https://api-pink-venom.vercel.app/api/ytmp3?url=${q}`)
-    //const downloadUrl = down.result.download_url;
-let data = await gifted.ytmp3(q)
-const downloadUrl = data.download_url
+    const down = await fetchJson(`https://api-pink-venom.vercel.app/api/ytmp3?url=${q}`)
+    const downloadUrl = down.result.download_url;
+//let data = await gifted.ytmp3(q)
+//const downloadUrl = data.download_url
 const search = await yts(q);
 const data1 = search.videos[0];
 
@@ -280,10 +280,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         if (!pm) return reply(msr.url);
         if (!pm.includes('https://youtube.com/watch?v=')) return await reply(msr.not_fo);
 
-        //const jsonResponse = await fetchJson(`https://dark-yasiya-api-new.vercel.app/download/ytmp4?url=${q}`);
-        //const downloadUrl = jsonResponse.result[rr].dl_link;
-         let data = await gifted.ytvideo(pm, quality=`${rr}`)
-         const downloadUrl = data.download_url
+        const jsonResponse = await fetchJson(`https://dark-yasiya-api-new.vercel.app/download/ytmp4?url=${q}`);
+        const downloadUrl = jsonResponse.result[rr].dl_link;
+       //  let data = await gifted.ytvideo(pm, quality=`${rr}`)
+        // const downloadUrl = data.download_url
 
         // Reacting with upload icon
         await conn.sendMessage(from, { react: { text: '⬆', key: mek.key }});
@@ -322,11 +322,10 @@ let BTNURL = ownerdata.buttonurl;
 let prefix = config.PREFIX;
 let MAX_SIZE = "SIZE IS TO BIG"
     
-
-//const jsonResponse = await fetchJson(`https://dark-yasiya-api-new.vercel.app/download/ytmp4?url=${q}`);
-//const downloadUrl = jsonResponse.result[rr].dl_link;
-let data = await gifted.ytvideo(pm, quality=`${rr}`)
-const downloadUrl = data.download_url
+const jsonResponse = await fetchJson(`https://dark-yasiya-api-new.vercel.app/download/ytmp4?url=${q}`);
+const downloadUrl = jsonResponse.result[rr].dl_link;
+//let data = await gifted.ytvideo(pm, quality=`${rr}`)
+//const downloadUrl = data.download_url
 const search = await yts(q);
 const data3 = search.videos[0];
 
