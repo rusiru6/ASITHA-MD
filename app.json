@@ -1,7 +1,7 @@
 {
   "name": "ASITHA-MD",
   "description": "Javascript WhatsApp bot made by ASITHA",
-  "logo": "https://telegra.ph/file/dddf7ee9971497aa050ef.jpg",
+  "logo": "https://i.postimg.cc/rmL0Tm9y/Asitha-MD.png",
   "keywords": ["bot"],
   "success_url": "/",
 
@@ -11,8 +11,12 @@
       "required": true
     },  
 
-    "MONGODB": {
-      "description": "Put your mongodb url..",
+    "GITHUB_AUTH_TOKEN": {
+      "description": "Put your github auth token url..",
+      "required": true
+    },
+    "GITHUB_USERNAME": {
+      "description": "Put your github user name.",
       "required": true
     }
 },
