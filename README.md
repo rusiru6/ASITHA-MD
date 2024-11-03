@@ -6,7 +6,7 @@
 
 <p align="center">
 <a href="https://github.com/ASITHA-MD/ASITHA-MD">
-    <img src="https://i.postimg.cc/zvpdnfsK/1727229710389.jpg"  width="700px">
+    <img src=https://i.postimg.cc/rmL0Tm9y/Asitha-MD.png"  width="700px">
 </a>
 <hr>
  <p align="center">
