@@ -95,15 +95,22 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [20.x]
+
+    env:
+      SESSION_ID: Enter Your SESSION_ID
+      GITHUB_AUTH_TOKEN: Enter Your GITHUB_AUTH_TOKEN
+      GITHUB_USERNAME : Enter your GITHUB_USERNAME
 
     steps:
     - name: Checkout repository
